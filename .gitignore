@@ -35,3 +35,7 @@
 *.synctex.gz
 *.toc
 *.toc1
+/.idea/latex-thesis-template.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
