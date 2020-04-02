@@ -16,7 +16,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[%
 paper=A4,         % alle weiteren Papierformat einstellbar
-fontsize=12pt,    % Schriftgröße (12pt, 11pt (Standard))
+fontsize=11pt,    % Schriftgröße (12pt, 11pt (Standard))
 BCOR12mm,         % Bindekorrektur, bspw. 1 cm
 DIV14,            % breiter Satzspiegel
 parskip=half*,    % Absatzformatierung s. scrguide 3.1
@@ -97,6 +97,14 @@ final             % draft beschleunigt die Kompilierung
     %backend=bibtex           % Ggf. für ältere Distributionen bibtex verwenden
     backend=biber
 ]{biblatex}
+
+%Namen nach Schema "Nachname, Vorname" für alle Autoren
+\DeclareNameAlias{sortname}{last-first}
+
+%benutze "et al." statt "u.a."
+\DefineBibliographyStrings{ngerman}{
+   andothers = {{et\,al\adddot}},
+}
   
 % Bibliograpthy
 \bibliography{library/library}
@@ -232,4 +240,4 @@ final             % draft beschleunigt die Kompilierung
 \usepackage[german,capitalise]{cleveref}
 
 \input{config/Abkuerzungen}
-\makeglossaries\makeglossaries 
+\makeglossaries\makeglossaries
